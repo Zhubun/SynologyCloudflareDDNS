@@ -38,8 +38,6 @@ fi
 recordId=$(echo "$res" | jq -r ".result[0].id")
 recordIp=$(echo "$res" | jq -r ".result[0].content")
 
-echo $recordId
-echo $recordIp
 
 if [[ $recordIp = "$ipAddr" ]]; then
     echo "nochg";
